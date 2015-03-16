@@ -1,0 +1,16 @@
+SELECT 
+	SHIP,
+	(
+		SELECT 
+			CLASS 
+		FROM
+			SHIPS S
+		WHERE
+			S.NAME = O.SHIP
+	) CLASS
+	
+FROM 
+	dbo.OUTCOMES o
+JOIN
+	dbo.BATTLES b
+	on (b.NAME = o.BATTLE)
