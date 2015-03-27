@@ -1,0 +1,9 @@
+/* number of stars and how many of these are stared in movies */
+
+SELECT 
+	COUNT(MS.NAME), 
+	COUNT(S.STARNAME)
+FROM /* MOVIESTAR IS LEFT IN RESPECT TO THE JOIN OPERATION */ 
+	MOVIESTAR MS LEFT JOIN STARSIN S 
+ON
+	MS.NAME = S.STARNAME 
