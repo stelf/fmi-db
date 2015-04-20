@@ -1,0 +1,11 @@
+/* броя на служителите по департамент, независимо дали в департамент */
+
+SELECT 
+	(SELECT DEPTNAME FROM DEPARTMENT WHERE D.DEPTNO = DEPARTMENT.DEPTNO), 
+	COUNT(*) 
+FROM 
+	DEPARTMENT D 
+LEFT OUTER JOIN 
+	EMPLOYEE E ON (D.DEPTNO = E.WORKDEPT) 
+GROUP	
+	BY D.DEPTNO
