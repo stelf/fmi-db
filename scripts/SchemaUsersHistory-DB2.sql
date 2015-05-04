@@ -17,12 +17,12 @@ INSERT INTO Users.Users VALUES
 ('gpenkov', 'gheorghi penkov', 'administrator'),
 ('avelin', 'alexander velin', 'administrator'),
 ('mmarinov', 'marin marinov', 'users' ),
-('ppentchev', 'petar pentchev', 'users'),
+('ppentchev', 'petko pentchev', 'users'),
 ('bombe', 'vesselin kotarov', 'users'),
 ('maav', 'boris gueorguiev', 'bofh'),
 ('bofh', 'petar marinov', 'bofh');
 
-INSERT INTO Users.History VALUES 
+INSERT INTO Users.History VALUES
 
 ('mmarinov', (current timestamp) - 1 day, 'logout', 'Y'),
 ('gpenkov', (current timestamp) - 2 day, 'logout', 'N')	,
