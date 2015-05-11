@@ -13,6 +13,9 @@ CREATE TABLE Users.History(
 	unique(ts, username)
 );
 
+CREATE INDEX H_USERNAME on Users.History(username);
+CREATE INDEX H_TS on Users.History(ts);
+
 INSERT INTO Users.Users VALUES
 ('gpenkov', 'gheorghi penkov', 'administrator'),
 ('avelin', 'alexander velin', 'administrator'),
