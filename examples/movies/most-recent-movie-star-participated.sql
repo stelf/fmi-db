@@ -1,3 +1,5 @@
+/* for each actor, find the most recent movie he took part in */
+
 SELECT 
 	M.NAME,
 		( 
