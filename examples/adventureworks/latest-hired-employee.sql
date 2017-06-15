@@ -38,3 +38,22 @@ WHERE
 			From HumanResources.Employee
 		)
 	)
+
+/* variant 3 */
+
+SELECT 
+	PP.FirstName, 
+	PP.LastName, 
+	imd.HireDate
+FROM 
+	Person.Person as pp
+INNER JOIN (
+	SELECT HireDate, BusinessEntityID
+		FROM
+		HumanResources.Employee as e
+	WHERE
+		e.HireDate >= ALL (
+			SELECT HireDate from HumanResources.Employee
+		)
+	) as imd 
+ON (pp.BusinessEntityId = imd.BusinessEntityId)
