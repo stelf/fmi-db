@@ -5,6 +5,7 @@ Useful Reads
 
 * Introduction to SQL - https://www.stat.berkeley.edu/~spector/sql.pdf
 * Interactive SQL Tutorial - http://sqlzoo.net/wiki/SQL_Tutorial
+* SQL Style guide - https://www.sqlstyle.guide/
 
 Online courses
 ===
